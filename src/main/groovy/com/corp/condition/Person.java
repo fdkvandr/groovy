@@ -13,6 +13,11 @@ public class Person {
         return id > 10;
     }
 
+    public boolean isCase(Object switchValue) {
+        System.out.println("invoke isCase: " + switchValue);
+        return false;
+    }
+
     public Integer getId() {
         return id;
     }

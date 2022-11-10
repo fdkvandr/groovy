@@ -15,7 +15,8 @@ class OopRunner {
 
         println student.@firstName // Обойдем getter`ы и setter`ы и на прямую возьмем это поле
 
-        def student1 = new Student(firstName: "Petr", lastName: "Petrov", age: 18)
+        def student1 = new Student(firstName: "Petr", lastName: "Petrov", age: 18, id: -1)
+        assert !student1.validateId()
         println student1
 
         Student student2 = ['Sveta', 'Sveticova', 30] // coercion

@@ -1,11 +1,12 @@
 package com.corp.oop
 
+import com.corp.trait.WithId
 import groovy.transform.ToString
 import groovy.transform.TupleConstructor
 
 @ToString
 @TupleConstructor
-class Student {
+class Student implements WithId {
 
     String firstName
     String lastName

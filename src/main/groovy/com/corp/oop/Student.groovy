@@ -28,5 +28,21 @@ class Student implements WithId {
         println "missing property $name is invoked"
         "default value"
     }
+
+    def getInfo() {
+        Closure closure = {
+            println thisObject // == this
+            println owner
+            println delegate
+
+            Closure second = {
+                println thisObject // == this
+                println owner
+                println delegate
+            }
+            second()
+        }
+        closure
+    }
 }
 
